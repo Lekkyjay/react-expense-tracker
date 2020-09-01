@@ -18,7 +18,8 @@ export const GlobalContext = createContext(initialState);
 export const GlobalProvider = ({ children }) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
 
-  //  Dispatch Actions to our reducer -> AppReducer
+  //Below are action generator functions which will be could be called from any component
+  //When called, they dispatch Actions(emit events) which will be intercepted by our reducer(event handler) -> AppReducer
   function deleteTransaction(id) {
     dispatch({
       type: 'DELETE_TRANSACTION',
