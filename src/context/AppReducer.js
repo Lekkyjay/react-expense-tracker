@@ -10,6 +10,16 @@ export default (state, action) => {
         ...state,
         transactions: [action.payload, ...state.transactions]
       }
+    case 'EXPENSES':
+      return {
+        ...state,
+        transactions: state.transactions.filter(transaction => transaction.amount < 0)
+      }
+    case 'INCOMES':
+      return {
+        ...state,
+        transactions: state.transactions.filter(transaction => transaction.amount > 0)
+      }
     default:
       return state;
   }

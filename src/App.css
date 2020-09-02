@@ -105,6 +105,48 @@ input[type='number'] {
   outline: 0;
 }
 
+.transactionList .filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 5px;
+}
+
+.transactionList .filter h3 {
+  border-bottom: none;
+  margin-bottom: -5px;
+}
+
+.transactionList .filter .btns {
+  display: flex;
+  justify-content: space-around;
+  width: 200px;
+  margin-bottom: -30px;
+}
+
+.transactionList .filter .btns {
+  padding: 10px;
+  border-radius: 10%;
+}
+
+.transactionList .filter .btns .bttn {
+  color: antiquewhite;
+}
+
+.transactionList .filter .btns .all {
+  background: #9c88ff;
+}
+
+.transactionList .filter .btns .expenses {
+  background: red;
+}
+
+.transactionList .filter .btns .incomes {
+  background: #2ecc71;
+}
+
+
 .list {
   list-style-type: none;
   padding: 0;
